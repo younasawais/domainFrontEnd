@@ -1,0 +1,148 @@
+* {
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b6d5ff;
+    font-family: 'Squada One', cursive;
+  }
+
+  a, button{
+    font-family: 'Squada One', cursive;
+  }
+
+  .input-group-prepend .custom-select{
+    margin: 0 5px 0 2px;
+    cursor: pointer;
+  }
+  .input-group-prepend .custom-select:hover{
+    color: #cbecff;
+    background-color: #0c84eb;
+    border-color: #1b5e8c;
+  }
+  .custom-select option{
+    color: #2978e3;
+    background-color: #e2eeff;
+  }
+
+  .custom-select option:hover{
+    color: #9fc6fd;
+    background-color: #0153a8;
+  }
+
+  .test {
+    padding: .05rem 01rem;
+}
+
+.btn-outline-secondary {
+    color: #85c6ff;
+    border-color: #88caff;
+}
+
+.btn-outline-secondary:hover {
+    color: #0153a8;
+    background-color: #7fc0fb;
+    border-color: #000000;
+}
+
+.nav-item .btn-link{
+    color: #003f7e;
+    background-color: #8dbfe8;
+    border-color: #d3d9df00;
+    border-radius: 5px;
+    margin: 0 2px 0 2px;
+    padding: 3px 3px 3px 3px;
+    font-size: large;
+}
+
+
+.nav .toTheLeft{
+  margin: 0px 5px 0px 5px;
+  border-radius: .3rem;
+}
+
+.nav{
+  padding-top: 8px;
+}
+
+.btn-outline-primary, .navbar-nav {
+  color: #afd5ff;border-color: #3998ff47;
+}
+
+
+
+.div-scroll{
+  overflow-y: auto;
+  height: 90vh;
+  overflow-x: hidden;
+  margin-top: 3vh;
+}
+
+.div-scroll .form-row{
+  margin-left: 0px;
+}
+
+h2, h3{
+  margin-top: 10px;
+}
+
+/******* Scroll Bard *****/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a0c9ff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(31, 173, 255); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 99, 156); 
+}
+
+
+/* #loginOrCreateUser {
+  background-color: #9ec0f4;
+  font-weight: bolder;
+  color: red;
+} */
+
+#domainAvailable{
+  color : #b8ffb6
+}
+
+#domainUnavailable{
+  color : #e68a8a
+}
+
+a{
+  color : #afd5ff
+}
+a:hover{
+  color :#afffdf
+}
+
+.transparant{
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.payment-card{
+  background-color: rgba(63, 160, 246, 0.53);
+}
+
+.payment-card-body{
+  background-color: #b3dcff;
+}
+
+.smallText{
+  color : #ff9090
+}

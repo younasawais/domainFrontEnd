@@ -1,0 +1,71 @@
+#loginOrCreateUser{
+    animation-name: colorLogin;
+    animation-duration: 1s;
+    animation-iteration-count : infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes colorLogin {
+    from {background-color: #9ec0f4;}
+    to {background-color: #f8a56e;}
+  }
+
+  div, p, .btn, button, h1, h2, h3, h4, h5, h6, table, hr, a, select, li, ul, dl{
+    opacity: 1;
+    animation-name: example;
+    animation-duration: 1s;
+  }
+  
+  @keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @media (min-width: 700px) {
+    /* .toTheRight{
+      margin-left: 65vw
+    } */
+    .div-scroll{
+      height: 89vh;
+    }
+  }
+
+  @media (min-width: 850px) {
+    #root{
+      height: 122vh;
+    }
+    .toTheRight{
+      margin: 0px 5px 0px 5px;
+      border-color : #63636357
+    }
+    .toTheLeft{
+      margin: 0px 5px 0px 5px;
+      border-color : #63636357
+    }
+  }
+  
+  @media (min-width: 980px) {
+    .toTheRight{
+      margin-left: 51vw
+    }    
+    #root{
+      height: 101.5vh;
+    }
+  } 
+  
+  @media (min-width: 1200px) {
+    .toTheRight{
+      margin-left: 60vw
+    }
+  }
+  
+  @media (min-width: 1350px) {
+    .toTheRight{
+      margin-left: 65vw
+    }
+  }
+  @media (min-width: 1700px) {
+    .toTheRight{
+      margin-left: 70vw
+    }
+  }

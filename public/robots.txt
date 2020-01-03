@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+
+# git remote add domainProject https://github.com/younasawais/domainProject
+# git push domainProject
