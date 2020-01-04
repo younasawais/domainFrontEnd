@@ -28,7 +28,7 @@ class ShowDomainDetails extends Component {
         console.log(domainRegistrar[domainModify]);
         console.log("Sending above to backend");
         try {
-            const {data : response} = await axios.post(process.env.backendAPI + '/updateDomainRegistrar',{
+            const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/updateDomainRegistrar',{
                 "token" : sessionStorage.getItem("token"),
                 "domainRegistrar" : domainRegistrar[domainModify]
             }); 
@@ -46,7 +46,7 @@ class ShowDomainDetails extends Component {
     
     async handleCancelBtn(){
         try {
-            const {data : response} = await axios.post(process.env.backendAPI + '/showDomainNames',{
+            const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/showDomainNames',{
                 "token" : sessionStorage.getItem("token")
             }); 
             console.log(response);
@@ -71,7 +71,7 @@ class ShowDomainDetails extends Component {
     async componentDidMount(){
         //this.handleCancelBtn();
         try {
-            const {data : response} = await axios.post(process.env.backendAPI + '/showDomainNames',{
+            const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/showDomainNames',{
                 "token" : sessionStorage.getItem("token")
             }); 
             console.log(response);

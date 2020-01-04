@@ -22,10 +22,11 @@ class ForgotPass extends Component {
         const {email} = this.state;
         console.log("email : " + email);
         this.setState({send : true});
-        axios.post(process.env.backendAPI + '/forgotPass', {"email" : email});
+        axios.post(process.env.REACT_APP_backendAPI + '/forgotPass', {"email" : email});
     }
 
     render() { 
+        console.log(process.env);
         return ( 
             <React.Fragment>
                 <form>

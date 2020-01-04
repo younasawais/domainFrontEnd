@@ -31,7 +31,7 @@ class LoginComp extends Component {
         this.setState({loading : true});
         const {email, password} = this.state;
         console.log("email : " + email + ", Password : " + password); 
-        const response = await axios.post(process.env.backendAPI + '/login',
+        const response = await axios.post(process.env.REACT_APP_backendAPI + '/login',
                                           {"email" : email, "password" : password});
         console.log(response);
         if(this.props.register && response.headers["x-auth-token"] !== "false"){ //TODO: after registration, reset vars

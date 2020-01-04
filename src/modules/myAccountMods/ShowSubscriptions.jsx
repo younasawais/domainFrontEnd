@@ -22,7 +22,7 @@ class ShowSubscriptions extends Component {
         let token;
         try {
             token = sessionStorage.getItem("token");
-            const {data : response} = await axios.post(process.env.backendAPI + '/getUserSubscriptions',{"token" : token}); 
+            const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/getUserSubscriptions',{"token" : token}); 
             console.log(response);
             this.setState({
                 subscriptions : [...response]
@@ -53,7 +53,7 @@ class ShowSubscriptions extends Component {
             "subscriptionId": this.state.subscriptions[this.state.showYesNo].subscriptionId
         };
         console.log(showSend);
-        const {data : response} = await axios.post(process.env.backendAPI + '/deleteSubscription',{
+        const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/deleteSubscription',{
             "token"         : token,
             "deleteIndex"   : this.state.showYesNo,
             "subscriptionId": this.state.subscriptions[this.state.showYesNo].subscriptionId
@@ -114,7 +114,7 @@ export default ShowSubscriptions;
     //     let token;
     //     try {
     //         token = sessionStorage.getItem("token");
-    //         const {data : response} = await axios.post(process.env.backendAPI + '/getSubscriptions',{"token" : token}); 
+    //         const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/getSubscriptions',{"token" : token}); 
     //         console.log(response);
     //         const {subscriptions} = response;
     //         this.setState({

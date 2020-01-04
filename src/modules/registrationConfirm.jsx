@@ -17,7 +17,7 @@ class RegistrationConfirm extends Component {
     async componentDidMount(){
         const {email} = this.props.userInfo;
         console.log("Email send: " + email);
-        const {data} = await axios.post(process.env.backendAPI+"/emailexist",{
+        const {data} = await axios.post(process.env.REACT_APP_backendAPI+"/emailexist",{
             email : email
         });
         console.log(data);

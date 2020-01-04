@@ -176,7 +176,7 @@ function onlyEmail(value){
 }
 // async function emailExists(value){
 //     console.log("Email send: " + value);
-//     const {data} = await axios.post(process.env.backendAPI+"/emailexist",{
+//     const {data} = await axios.post(process.env.REACT_APP_backendAPI+"/emailexist",{
 //         email : value
 //     });
 //     console.log(data);

@@ -56,7 +56,7 @@ class ShowUserDetails extends Component {
         let token;
         try {
             token = sessionStorage.getItem("token");
-            const {data : response} = await axios.post(process.env.backendAPI + '/getUserData',{"token" : token}); 
+            const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/getUserData',{"token" : token}); 
             console.log(response);
             const {name, surname, email, phoneNumber, address, address2, city, state, country, zip} = response;
             this.setState({
@@ -110,7 +110,7 @@ class ShowUserDetails extends Component {
 
     async handleConfirmChanges(){
         try {
-            const {data : response} = await axios.post(process.env.backendAPI + '/updateUserInfo',{
+            const {data : response} = await axios.post(process.env.REACT_APP_backendAPI + '/updateUserInfo',{
                 "token" : sessionStorage.getItem("token"),
                 "userInfo" : this.state.modifyUserInfo
             }); 
