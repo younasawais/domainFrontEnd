@@ -22,7 +22,7 @@ class ForgotPass extends Component {
         const {email} = this.state;
         console.log("email : " + email);
         this.setState({send : true});
-        axios.post('http://localhost:4000/forgotPass', {"email" : email});
+        axios.post(process.env.backendAPI + '/forgotPass', {"email" : email});
     }
 
     render() { 

@@ -22,7 +22,7 @@ class NewPass extends Component {
     }
 
     async handleSubmit(){
-        const {data : response} = await axios.post('http://localhost:4000/resetPassword',{
+        const {data : response} = await axios.post(process.env.backendAPI + '/resetPassword',{
             "token"         : this.props.match.params.token,
             "password"      : this.state.password1
         }); 
