@@ -176,7 +176,7 @@ function onlyEmail(value){
 }
 // async function emailExists(value){
 //     console.log("Email send: " + value);
-//     const {data} = await axios.post("http://localhost:4000/emailexist",{
+//     const {data} = await axios.post(process.env.backendAPI+"/emailexist",{
 //         email : value
 //     });
 //     console.log(data);

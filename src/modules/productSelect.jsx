@@ -54,7 +54,7 @@ class ProductSelect extends Component {
         if(selectedFile.size < 5000000 && regex.test(selectedFile.name)){
             const data = new FormData() ;
             data.append('file', selectedFile, selectedFile.name);
-            await axios.post("http://localhost:4000/uploadpdf",data);
+            await axios.post(process.env.backendAPI+"/uploadpdf",data);
             this.setState({
                 errorMessageUpload : false,
                 fileName    : selectedFile.name
@@ -112,7 +112,7 @@ class ProductSelect extends Component {
         console.log("Valid? :" + valid);
         if(valid){
             console.log("Domainstructure is valid : " + domain);
-            const {data} = await axios.post("http://localhost:4000/checkdomain",{"domainName" : domain});
+            const {data} = await axios.post(process.env.backendAPI+"/checkdomain",{"domainName" : domain});
             this.setState({
                 domainNameAvailable : data.domainNameAvailable, 
                 domainName : domain,

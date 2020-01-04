@@ -35,7 +35,7 @@ class ContactPage extends Component {
     async inputHandleSubmit(){
         const {name,surname,email,phoneNumber,comment} = this.state;
         this.setState({sendStatus : "processing"},async ()=>{
-            const {data} = await axios.post("http://localhost:4000/sendContactMessage",{
+            const {data} = await axios.post(process.env.backendAPI+"/sendContactMessage",{
                 name        : name,
                 surname     : surname,
                 email       : email,

@@ -18,7 +18,7 @@ class CheckoutForm extends Component {
 
   async componentDidMount(){
     if(this.props.currentUser !== ""){ // Loggedin
-    const {data} = await axios.post("http://localhost:4000/getUserData",{
+    const {data} = await axios.post(process.env.backendAPI+"/getUserData",{
       token : sessionStorage.getItem("token") //user token
     });
     console.log(data);
@@ -56,7 +56,7 @@ class CheckoutForm extends Component {
 
         console.log(responseStripe);
         token_id = responseStripe.token.id;
-        response = await axios.post("http://localhost:4000/createSubscriptionOldUser", {
+        response = await axios.post(process.env.backendAPI+"/createSubscriptionOldUser", {
           token           : token_id,  
           userToken       : sessionStorage.getItem("token"),
           productData     : productData,
@@ -70,7 +70,7 @@ class CheckoutForm extends Component {
         });
         token_id = responseStripe.token.id;
         console.log(responseStripe);
-        response = await axios.post("http://localhost:4000/createSubscriptionNewUser", {
+        response = await axios.post(process.env.backendAPI+"/createSubscriptionNewUser", {
           token           : token_id,  
           userInfo        : userInfo,
           productData     : productData,
