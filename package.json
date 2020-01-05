@@ -9,13 +9,15 @@
     "react-dom": "^16.10.1",
     "react-router-dom": "^5.1.1",
     "react-scripts": "3.1.2",
-    "react-stripe-elements": "^5.1.0"
+    "react-stripe-elements": "^5.1.0",
+    "serve": "^11.3.0"
   },
   "scripts": {
-    "start": "set PORT=3000 && react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild" : "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
