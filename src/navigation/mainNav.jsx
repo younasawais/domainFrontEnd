@@ -93,6 +93,7 @@ class MainNav extends Component {
 
     render() {  
         //console.log(this.state.loggsedin);
+        console.log(process.env);
         const {props} = this;
         return ( 
             <React.Fragment>
@@ -204,3 +205,11 @@ class MainNav extends Component {
 }
 
 export default MainNav;
+
+
+
+// "awais": {
+//     "heroku-postbuild": "npm run build",
+//     "start2": "react-scripts start",
+//     "start": "serve -s build"
+//   },
